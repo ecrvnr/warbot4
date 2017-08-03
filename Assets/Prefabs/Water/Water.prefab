@@ -55,7 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 370cba2de6c38744cb4803a8d7cc618f, type: 2}
+  - {fileID: 2100000, guid: 58376da3d5d64f7448a11aa41ed82238, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,9 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530249c814a843547bd9134ff0339595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveHeight: 1
-  speed: 1
+  waveHeight: 0.2
+  speed: 3
   waveLength: 1
-  randomHeight: 0.2
+  randomHeight: 0.4
   randomSpeed: 5
   noiseOffset: 20
