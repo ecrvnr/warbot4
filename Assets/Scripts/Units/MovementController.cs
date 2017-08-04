@@ -13,8 +13,9 @@ public class MovementController : MonoBehaviour {
 
   void Start() {
     m_NavMeshAgent = GetComponent<NavMeshAgent>();
-    m_CurrentWaypoint = m_Waypoints[0];
-    m_CurrentWaypointIndex = 0;
+    Random.InitState(System.DateTime.Now.ToString().GetHashCode() * gameObject.name.GetHashCode());
+    m_CurrentWaypointIndex = Random.Range(0 , 4);
+    m_CurrentWaypoint = m_Waypoints[m_CurrentWaypointIndex];
     m_NavMeshAgent.SetDestination(m_CurrentWaypoint.position);
     m_NavMeshAgent.isStopped = false;
   }
@@ -22,7 +23,7 @@ public class MovementController : MonoBehaviour {
   void Update() {
     if (Vector3.Distance(transform.position , m_NavMeshAgent.destination) <= m_NavMeshAgent.stoppingDistance) {
       m_NavMeshAgent.isStopped = true;
-      m_CurrentWaypointIndex = Random.Range(0 , 3);
+      m_CurrentWaypointIndex = Random.Range(0 , 4);
       m_CurrentWaypoint = m_Waypoints[m_CurrentWaypointIndex];
       m_NavMeshAgent.SetDestination(m_CurrentWaypoint.position);
       m_NavMeshAgent.isStopped = false;
