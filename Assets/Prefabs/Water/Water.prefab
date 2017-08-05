@@ -92,9 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530249c814a843547bd9134ff0339595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveHeight: 0.2
-  speed: 3
-  waveLength: 1
+  waveHeight: 0.5
+  speed: 10
+  waveLength: 2
   randomHeight: 0.4
   randomSpeed: 5
   noiseOffset: 20
