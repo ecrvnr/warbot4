@@ -1663,7 +1663,7 @@ Prefab:
     - target: {fileID: 114426759275920850, guid: 14f3862c2fe0c6e45b3af7de3f377bb7,
         type: 2}
       propertyPath: speed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114426759275920850, guid: 14f3862c2fe0c6e45b3af7de3f377bb7,
         type: 2}
@@ -1673,7 +1673,12 @@ Prefab:
     - target: {fileID: 114426759275920850, guid: 14f3862c2fe0c6e45b3af7de3f377bb7,
         type: 2}
       propertyPath: waveLength
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426759275920850, guid: 14f3862c2fe0c6e45b3af7de3f377bb7,
+        type: 2}
+      propertyPath: noiseOffset
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14f3862c2fe0c6e45b3af7de3f377bb7, type: 2}
