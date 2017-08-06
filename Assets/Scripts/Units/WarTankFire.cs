@@ -7,49 +7,64 @@ public class WarTankFire : MonoBehaviour {
 
   public float m_TurretAimRotationSpeed = 25f;
   public float m_TurretResetRotationSpeed = 5f;
-  public Rigidbody m_Shell;
   public float m_Precision = 8f;
+  public float m_ReloadTime = 2f;
+  public Rigidbody m_Shell;
 
   private Transform m_ProjectileEmitter;
-  private Vector3 m_FireTarget;
+  private Transform m_Turret;
+  private Transform m_AttackTarget;
   private Camera m_Camera;
-  private GameObject m_Turret;
   private Boolean m_TargetSet;
-  private Quaternion m_LookRotation;
+  private Quaternion m_AimRotation;
+  private float m_TimeToReload;
 
 
   void Awake() {
     m_Camera = GameObject.Find("CameraRig/MainCamera").GetComponent<Camera>();
     m_ProjectileEmitter = transform.Find("TankRenderers/TankTurret/ProjectileEmitter");
-    m_Turret = transform.Find("TankRenderers/TankTurret").gameObject;
+    m_Turret = transform.Find("TankRenderers/TankTurret");
+    m_AttackTarget = new GameObject("AttackTarget").transform;
     m_TargetSet = false;
+    m_TimeToReload = 0f;
   }
 
 
   void Update() {
     if (Input.GetMouseButtonDown(1)) {
-      SetTarget(Input.mousePosition);
+      if (m_TimeToReload != 0f) {
+        Debug.Log("You have to wait another " + m_TimeToReload.ToString() + "s before you can fire again!");
+      } else {
+        SetTarget(Input.mousePosition);
+      }
+    }
+
+    if (m_TimeToReload > 0f) {
+      m_TimeToReload -= Time.deltaTime;
+    } else if (m_TimeToReload < 0f) {
+      m_TimeToReload = 0f;
     }
   }
 
 
   void LateUpdate() {
-    if (!m_TargetSet) {
-      m_FireTarget = transform.position + transform.forward * 10f;
+    if (m_TargetSet) {
+      SetLookRotation(m_AttackTarget.position);
+    } else {
+      SetLookRotation(transform.position + transform.forward * 4f);
     }
-    SetLookRotation();
     RotateTurret();
 
-    if (m_TargetSet && Quaternion.Angle(m_Turret.transform.rotation , m_LookRotation) < m_Precision) {
+    if (m_TargetSet && Quaternion.Angle(m_Turret.transform.rotation , m_AimRotation) < m_Precision) {
       Fire();
     }
   }
 
 
-  private void SetLookRotation() {
-    Vector3 meToTarget = (m_FireTarget - m_ProjectileEmitter.transform.position).normalized;
+  private void SetLookRotation(Vector3 targetPosition) {
+    Vector3 meToTarget = (targetPosition - m_ProjectileEmitter.transform.position).normalized;
     meToTarget.y = 0f;
-    m_LookRotation = Quaternion.LookRotation(meToTarget);
+    m_AimRotation = Quaternion.LookRotation(meToTarget);
   }
 
 
@@ -58,8 +73,8 @@ public class WarTankFire : MonoBehaviour {
     Rigidbody shellInstance =
         Instantiate(m_Shell , m_ProjectileEmitter.position , m_ProjectileEmitter.rotation) as Rigidbody;
     // Set the shell's velocity to the launch force in the fire position's forward direction.
-    Vector3 meToTarget = (m_FireTarget - m_ProjectileEmitter.position);
-    Debug.DrawLine(m_FireTarget , m_FireTarget + Vector3.up * 3f , Color.red , 5f);
+    Vector3 meToTarget = (m_AttackTarget.position - m_ProjectileEmitter.position);
+    Debug.DrawLine(m_AttackTarget.position , m_AttackTarget.position + Vector3.up * 3f , Color.red , 5f);
     float height = m_ProjectileEmitter.position.y; // target y
     meToTarget.y = 0f;
     float distance = meToTarget.magnitude;
@@ -69,6 +84,7 @@ public class WarTankFire : MonoBehaviour {
     * (1f / Mathf.Cos(launchAngle))
     * Mathf.Sqrt((0.5f * Physics.gravity.magnitude * Mathf.Pow(distance , 2)) / (distance * Mathf.Tan(launchAngle) + height));
     m_TargetSet = false;
+    m_TimeToReload = m_ReloadTime;
   }
 
 
@@ -76,7 +92,7 @@ public class WarTankFire : MonoBehaviour {
     RaycastHit hit;
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
     if (Physics.Raycast(ray , out hit , LayerMask.GetMask("Environment"))) {
-      m_FireTarget = hit.point;
+      m_AttackTarget.position = hit.point;
       Debug.Log("Target set");
       m_TargetSet = true;
     }
@@ -85,10 +101,10 @@ public class WarTankFire : MonoBehaviour {
 
   void RotateTurret() {
     float rotationSpeed = m_TargetSet ? m_TurretAimRotationSpeed : m_TurretResetRotationSpeed;
-    m_Turret.transform.rotation = Quaternion.Slerp(m_Turret.transform.rotation , m_LookRotation , rotationSpeed * Time.deltaTime);
+    m_Turret.transform.rotation = Quaternion.Slerp(m_Turret.transform.rotation , m_AimRotation , rotationSpeed * Time.deltaTime);
 
-    if (Quaternion.Angle(m_Turret.transform.rotation , m_LookRotation) < m_Precision) {
-      m_Turret.transform.rotation = m_LookRotation;
+    if (Quaternion.Angle(m_Turret.transform.rotation , m_AimRotation) < m_Precision) {
+      m_Turret.transform.rotation = m_AimRotation;
     }
   }
 }
