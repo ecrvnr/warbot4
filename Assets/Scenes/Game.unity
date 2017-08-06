@@ -1396,7 +1396,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4649662778119170, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 30.3
       objectReference: {fileID: 0}
     - target: {fileID: 4649662778119170, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1404,7 +1404,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4649662778119170, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 34.7
       objectReference: {fileID: 0}
     - target: {fileID: 4649662778119170, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1441,6 +1441,30 @@ Prefab:
     - target: {fileID: 1568926204721008, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538730592287200, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538730592287200, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778929292224686, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.50000143
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778929292224686, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.2900023
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236070490686326, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.5099988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236070490686326, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.8400016
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b404ee8db7a7eb04ab823175f5c68ed8, type: 2}
