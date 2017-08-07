@@ -91,7 +91,7 @@ public class WarTankFire : MonoBehaviour {
   void SetTarget(Vector3 mousePosition) {
     RaycastHit hit;
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    if (Physics.Raycast(ray , out hit , LayerMask.GetMask("Environment"))) {
+    if (Physics.Raycast(ray , out hit , float.MaxValue ,  LayerMask.GetMask("Environment"))) {
       m_AttackTarget.position = hit.point;
       Debug.Log("Target set");
       m_TargetSet = true;

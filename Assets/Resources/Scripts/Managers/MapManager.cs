@@ -65,6 +65,7 @@ public class MapManager : MonoBehaviour {
     ground.transform.localScale = new Vector3(m_MapWidth , 4f , m_MapHeight);
     ground.isStatic = true;
     ground.AddComponent<BoxCollider>();
+    ground.layer = 9;
     m_GameArea = new Area(m_MapWidth , m_MapHeight , m_MarginSize);
     Area[,] propAreas;
     int propAreasX = (int)m_GameArea.width / (int)m_MinimumPropAreaSize;
@@ -91,6 +92,7 @@ public class MapManager : MonoBehaviour {
           float scale = Random.Range(1.0f , 1.5f);
           prop.transform.localScale = new Vector3(scale , scale , scale);
           prop.isStatic = true;
+          prop.layer = 9;
         } 
       }
     }

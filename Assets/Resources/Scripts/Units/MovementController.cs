@@ -30,7 +30,7 @@ public class MovementController : MonoBehaviour {
     RaycastHit hit;
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-    if (Physics.Raycast(ray , out hit , LayerMask.GetMask("Environment"))) {
+    if (Physics.Raycast(ray , out hit , float.MaxValue , LayerMask.GetMask("Environment"))) {
       m_CurrentWaypoint = hit.point;
       m_NavMeshAgent.SetDestination(m_CurrentWaypoint);
       m_NavMeshAgent.isStopped = false;
