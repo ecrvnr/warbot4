@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WarTank : MonoBehaviour {
 
-  public CameraControl m_Camera;
+  private CameraControl m_Camera;
 
   // Use this for initialization
   void Start() {
