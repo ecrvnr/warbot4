@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f271d49ada5ab674fbbae9964dc16cf9
+timeCreated: 1502127212
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Tank Lite
+  fontNames:
+  - Tank Lite
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

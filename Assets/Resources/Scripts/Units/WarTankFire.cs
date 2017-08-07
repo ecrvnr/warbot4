@@ -31,7 +31,7 @@ public class WarTankFire : MonoBehaviour {
 
 
   void Update() {
-    if (Input.GetMouseButtonDown(1)) {
+    if (Input.GetMouseButtonDown(1) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject(-1)) {
       if (m_TimeToReload != 0f) {
         Debug.Log("You have to wait another " + m_TimeToReload.ToString() + "s before you can fire again!");
       } else {
