@@ -47,6 +47,8 @@ public class PauseMenuManager : MonoBehaviour {
 
 
   public void BackToMainMenu() {
+    UnPause();
+    SceneManager.UnloadSceneAsync("Game");
     SceneManager.LoadScene("MainMenu");
   }
 
