@@ -29,7 +29,6 @@ public class MainMenuManager : MonoBehaviour {
 
   public void StartGame() {
     Time.timeScale = 1f;
-    SceneManager.UnloadSceneAsync("MainMenu");
     SceneManager.LoadScene("Game");
   }
 
