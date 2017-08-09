@@ -1618,6 +1618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 298105373}
   - component: {fileID: 298105374}
+  - component: {fileID: 298105375}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -1686,7 +1687,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 2093975160}
   m_HandleRect: {fileID: 845855623}
   m_Direction: 2
-  m_MinValue: 1
+  m_MinValue: 0
   m_MaxValue: 3
   m_WholeNumbers: 1
   m_Value: 1
@@ -1695,6 +1696,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &298105375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298105372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &301871861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,7 +1908,7 @@ GameObject:
   - component: {fileID: 360621902}
   - component: {fileID: 360621903}
   m_Layer: 0
-  m_Name: Toggle
+  m_Name: DesertToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1958,14 +1970,14 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1167689154}
   toggleTransition: 1
-  graphic: {fileID: 0}
+  graphic: {fileID: 1016017304}
   m_Group: {fileID: 1574650808}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &371899107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,7 +2135,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: DESERT
+  m_Text: MEDIEVAL
 --- !u!222 &376068282
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2459,7 +2471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Small
+  m_Text: Map Size
 --- !u!222 &458317840
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3051,7 +3063,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: TEAM RED
 --- !u!222 &588061755
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3240,6 +3252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607193497}
   - component: {fileID: 607193498}
+  - component: {fileID: 607193499}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -3308,15 +3321,26 @@ MonoBehaviour:
   m_FillRect: {fileID: 1034373499}
   m_HandleRect: {fileID: 353075761}
   m_Direction: 2
-  m_MinValue: 1
+  m_MinValue: 0
   m_MaxValue: 8
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &607193499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 607193496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &609175466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,7 +3960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 440, y: -19.835}
+  m_AnchoredPosition: {x: 458, y: -19.835}
   m_SizeDelta: {x: 880, y: 39.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686324102
@@ -4092,6 +4116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698313461}
   - component: {fileID: 698313462}
+  - component: {fileID: 698313463}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -4160,15 +4185,26 @@ MonoBehaviour:
   m_FillRect: {fileID: 2112537279}
   m_HandleRect: {fileID: 2129741183}
   m_Direction: 2
-  m_MinValue: 1
+  m_MinValue: 0
   m_MaxValue: 6
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &698313463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698313460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &706645213
 GameObject:
   m_ObjectHideFlags: 0
@@ -4444,6 +4480,8 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: TEAM RED
+      m_Image: {fileID: 0}
     - m_Text: Option A
       m_Image: {fileID: 0}
     - m_Text: Option B
@@ -4511,6 +4549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757891021}
   - component: {fileID: 757891022}
+  - component: {fileID: 757891023}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -4582,12 +4621,23 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &757891023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 757891020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &775857623
 GameObject:
   m_ObjectHideFlags: 0
@@ -4724,7 +4774,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: DESERT
+  m_Text: JUNGLE
 --- !u!222 &777063340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4936,7 +4986,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: DESERT
+  m_Text: SNOW
 --- !u!222 &783712578
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5286,6 +5336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825747597}
   - component: {fileID: 825747598}
+  - component: {fileID: 825747599}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -5354,15 +5405,26 @@ MonoBehaviour:
   m_FillRect: {fileID: 142642843}
   m_HandleRect: {fileID: 85767511}
   m_Direction: 2
-  m_MinValue: 1
+  m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &825747599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 825747596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829134398
 GameObject:
   m_ObjectHideFlags: 0
@@ -5666,6 +5728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841403214}
   - component: {fileID: 841403215}
+  - component: {fileID: 841403216}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -5737,12 +5800,23 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &841403216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 841403213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &845855622
 GameObject:
   m_ObjectHideFlags: 0
@@ -5846,8 +5920,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 439.50006, y: -468}
-  m_SizeDelta: {x: 879, y: 14.255005}
+  m_AnchoredPosition: {x: 458.00006, y: -489}
+  m_SizeDelta: {x: 916, y: 19.505005}
   m_Pivot: {x: 0.50000006, y: 0}
 --- !u!114 &852005144
 MonoBehaviour:
@@ -6102,7 +6176,7 @@ GameObject:
   - component: {fileID: 888462194}
   - component: {fileID: 888462195}
   m_Layer: 0
-  m_Name: Toggle (2)
+  m_Name: SnowToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6164,14 +6238,14 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 808764066}
   toggleTransition: 1
-  graphic: {fileID: 0}
+  graphic: {fileID: 1035697050}
   m_Group: {fileID: 1574650808}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &889775831
 GameObject:
   m_ObjectHideFlags: 0
@@ -6966,6 +7040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037211007}
   - component: {fileID: 1037211008}
+  - component: {fileID: 1037211009}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -7019,7 +7094,7 @@ MonoBehaviour:
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -7034,15 +7109,26 @@ MonoBehaviour:
   m_FillRect: {fileID: 775857624}
   m_HandleRect: {fileID: 1921157490}
   m_Direction: 2
-  m_MinValue: 0.25
+  m_MinValue: 0
   m_MaxValue: 4
   m_WholeNumbers: 0
-  m_Value: 4
+  m_Value: 0.1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1037211009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037211006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1067161196
 GameObject:
   m_ObjectHideFlags: 0
@@ -8447,7 +8533,7 @@ GameObject:
   - component: {fileID: 1289463298}
   - component: {fileID: 1289463299}
   m_Layer: 0
-  m_Name: Toggle (1)
+  m_Name: JungleToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8509,14 +8595,14 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1592185346}
   toggleTransition: 1
-  graphic: {fileID: 0}
+  graphic: {fileID: 1221640770}
   m_Group: {fileID: 1574650808}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1316232913
 GameObject:
   m_ObjectHideFlags: 0
@@ -8702,7 +8788,7 @@ Prefab:
     - target: {fileID: 224107748636604904, guid: 20649f4c0afc9d145a43e27d40ee5aba,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -14.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224107748636604904, guid: 20649f4c0afc9d145a43e27d40ee5aba,
         type: 2}
@@ -8712,7 +8798,7 @@ Prefab:
     - target: {fileID: 224107748636604904, guid: 20649f4c0afc9d145a43e27d40ee5aba,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 29.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224107748636604904, guid: 20649f4c0afc9d145a43e27d40ee5aba,
         type: 2}
@@ -9488,7 +9574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 440, y: -39.67}
+  m_AnchoredPosition: {x: 458, y: -39.67}
   m_SizeDelta: {x: 880, y: 129.67}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1464644727
@@ -9901,8 +9987,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 439.5, y: -360.79752}
-  m_SizeDelta: {x: 937, y: 145.895}
+  m_AnchoredPosition: {x: 458, y: -373.92252}
+  m_SizeDelta: {x: 937, y: 151.145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532365481
 MonoBehaviour:
@@ -10225,6 +10311,8 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: TEAM BLUE
+      m_Image: {fileID: 0}
     - m_Text: Option A
       m_Image: {fileID: 0}
     - m_Text: Option B
@@ -10717,7 +10805,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: TEAM BLUE
 --- !u!222 &1642371037
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10772,8 +10860,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 439.5, y: 0}
-  m_SizeDelta: {x: 879, y: 64.255005}
+  m_AnchoredPosition: {x: 458, y: 0}
+  m_SizeDelta: {x: 916, y: 69.505005}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1653868909
 MonoBehaviour:
@@ -11658,7 +11746,7 @@ GameObject:
   - component: {fileID: 1784533796}
   - component: {fileID: 1784533797}
   m_Layer: 0
-  m_Name: Toggle (3)
+  m_Name: MedievalToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11720,14 +11808,25 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 467852303}
   toggleTransition: 1
-  graphic: {fileID: 0}
+  graphic: {fileID: 538341634}
   m_Group: {fileID: 1574650808}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1796521461
 GameObject:
   m_ObjectHideFlags: 0
@@ -12126,6 +12225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886463301}
   - component: {fileID: 1886463302}
+  - component: {fileID: 1886463303}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -12197,12 +12297,23 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1886463303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886463300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1888736184
 GameObject:
   m_ObjectHideFlags: 0
@@ -13067,8 +13178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 439.5, y: -84.255005}
-  m_SizeDelta: {x: 880, y: 183.595}
+  m_AnchoredPosition: {x: 458, y: -89.505005}
+  m_SizeDelta: {x: 916, y: 188.845}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1969525798
 MonoBehaviour:
@@ -13153,6 +13264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972323363}
   - component: {fileID: 1972323364}
+  - component: {fileID: 1972323365}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -13221,15 +13333,26 @@ MonoBehaviour:
   m_FillRect: {fileID: 557023525}
   m_HandleRect: {fileID: 1751462822}
   m_Direction: 2
-  m_MinValue: 1
+  m_MinValue: 0
   m_MaxValue: 5
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1972323365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972323362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ac400da9f641f4b9b0562157858e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1974562508
 GameObject:
   m_ObjectHideFlags: 0
@@ -13283,7 +13406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -13315,6 +13438,8 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: Map Size
+      m_Image: {fileID: 0}
     - m_Text: Small
       m_Image: {fileID: 0}
     - m_Text: Medium
