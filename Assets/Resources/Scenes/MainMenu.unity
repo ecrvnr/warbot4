@@ -216,16 +216,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430009ab49c009440a80bc2913fa593b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TeamRedDropdown: {fileID: 0}
-  m_TeamBlueDropdown: {fileID: 0}
-  m_WarbaseSlider: {fileID: 0}
-  m_WartankSlider: {fileID: 0}
-  m_WarengineerSlider: {fileID: 0}
-  m_WarexplorerSlider: {fileID: 0}
-  m_WarturretSlider: {fileID: 0}
-  m_WarResourceSlider: {fileID: 0}
-  m_MapSelectToggleGroup: {fileID: 0}
-  m_MapSizeDropdown: {fileID: 0}
+  m_TeamRedDropdown: {fileID: 726197490}
+  m_TeamBlueDropdown: {fileID: 1591979036}
+  m_WarbaseSlider: {fileID: 298105374}
+  m_WartankSlider: {fileID: 1972323364}
+  m_WarengineerSlider: {fileID: 513507755}
+  m_WarexplorerSlider: {fileID: 698313462}
+  m_WarturretSlider: {fileID: 607193498}
+  m_WarResourceSlider: {fileID: 1037211008}
+  m_MapSelectToggleGroup: {fileID: 1574650808}
+  m_MapSizeDropdown: {fileID: 1974562510}
 --- !u!1 &38515275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1069728641}
+      - m_Target: {fileID: 33966784}
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
