@@ -8,12 +8,12 @@ public class MapManager : MonoBehaviour {
   public static MapManager instance;
   public float m_MarginSize = 10f;
   public MapType m_MapType;
+  public MapSize m_MapSize;
   public Area m_GameArea;
   public Transform m_CameraClamp1;
   public Transform m_CameraClamp2;
 
   private GameObject m_Map;
-  private MapType m_MapLoadedType;
 
   void Awake() {
     if (instance == null) {
@@ -21,6 +21,9 @@ public class MapManager : MonoBehaviour {
     } else if (instance != this) {
       Destroy(gameObject);
     }
+    m_MapType = MapType.MAP_DESERT;
+    m_MapSize = MapSize.MAP_MEDIUM;
+    GenerateMap();
   }
 
 
@@ -31,10 +34,13 @@ public class MapManager : MonoBehaviour {
 
 
   public void Update() {
-    if (m_MapLoadedType != m_MapType) {
-      DestroyMap();
-      GenerateMap();
-    }
+   
+  }
+
+
+  public void ChangeMap() {
+    DestroyMap();
+    GenerateMap();
   }
 
 
@@ -59,14 +65,13 @@ public class MapManager : MonoBehaviour {
         m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Desert/DesertMedium") as GameObject);
         break;
     }
-    m_MapLoadedType = m_MapType;
+
     m_Map.name = "Map";
     GameObject ground = GameObject.Find("Ground") as GameObject;
     m_GameArea = new Area(ground.transform.localScale.x, ground.transform.localScale.z, m_MarginSize);
     gameObject.GetComponent<NavMeshSurface>().BuildNavMesh();
     m_CameraClamp1.position = new Vector3(m_GameArea.minX, 0f, m_GameArea.minY);
     m_CameraClamp2.position = new Vector3(m_GameArea.maxX, 0f, m_GameArea.maxY);
-
   }
 
 
@@ -134,5 +139,11 @@ public class MapManager : MonoBehaviour {
     MAP_DESERT,
     MAP_SNOW,
     MAP_MEDIEVAL
+  }
+
+  public enum MapSize {
+    MAP_SMALL,
+    MAP_MEDIUM,
+    MAP_LARGE
   }
 }
