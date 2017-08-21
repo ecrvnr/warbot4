@@ -9,8 +9,11 @@ public class MapManager : MonoBehaviour {
   public float m_MarginSize = 10f;
   public MapType m_MapType;
   public Area m_GameArea;
+  public Transform m_CameraClamp1;
+  public Transform m_CameraClamp2;
 
   private GameObject m_Map;
+  private MapType m_MapLoadedType;
 
   void Awake() {
     if (instance == null) {
@@ -23,8 +26,23 @@ public class MapManager : MonoBehaviour {
 
   // Use this for initialization
   void Start() {
-    
+
   }
+
+
+  public void Update() {
+    if (m_MapLoadedType != m_MapType) {
+      DestroyMap();
+      GenerateMap();
+    }
+  }
+
+
+  public void DestroyMap() {
+    if (m_Map != null)
+      Destroy(m_Map);
+  }
+
 
   public void GenerateMap() {
     switch (m_MapType) {
@@ -41,9 +59,14 @@ public class MapManager : MonoBehaviour {
         m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Desert/DesertMedium") as GameObject);
         break;
     }
+    m_MapLoadedType = m_MapType;
+    m_Map.name = "Map";
     GameObject ground = GameObject.Find("Ground") as GameObject;
-    m_GameArea = new Area(ground.transform.localScale.x , ground.transform.localScale.z , m_MarginSize);
+    m_GameArea = new Area(ground.transform.localScale.x, ground.transform.localScale.z, m_MarginSize);
     gameObject.GetComponent<NavMeshSurface>().BuildNavMesh();
+    m_CameraClamp1.position = new Vector3(m_GameArea.minX, 0f, m_GameArea.minY);
+    m_CameraClamp2.position = new Vector3(m_GameArea.maxX, 0f, m_GameArea.maxY);
+
   }
 
 
@@ -60,37 +83,37 @@ public class MapManager : MonoBehaviour {
       maxX,
       maxY;
 
-    public Area(float _minX , float _minY , float _maxX , float _maxY) {
+    public Area(float _minX, float _minY, float _maxX, float _maxY) {
       minX = _minX;
       minY = _minY;
       maxX = _maxX;
       maxY = _maxY;
       height = maxY - minY;
       width = maxX - minX;
-      center = new Vector3(minX + width / 2f , 0f , minY + height / 2f);
-      topLeft = new Vector3(minX , 0f , maxY);
-      topRight = new Vector3(maxX , 0f , maxY);
-      bottomRight = new Vector3(maxX , 0f , minY);
-      bottomLeft = new Vector3(minX , 0f , minY);
+      center = new Vector3(minX + width / 2f, 0f, minY + height / 2f);
+      topLeft = new Vector3(minX, 0f, maxY);
+      topRight = new Vector3(maxX, 0f, maxY);
+      bottomRight = new Vector3(maxX, 0f, minY);
+      bottomLeft = new Vector3(minX, 0f, minY);
     }
 
 
-    public Area(float _minX , float _minY , float _maxX , float _maxY , float _marginSize) {
+    public Area(float _minX, float _minY, float _maxX, float _maxY, float _marginSize) {
       minX = _minX + _marginSize;
       minY = _minY + _marginSize;
       maxX = _maxX - _marginSize;
       maxY = _maxY - _marginSize;
       height = maxY - minY;
       width = maxX - minX;
-      center = new Vector3(minX + width / 2f , 0f , minY + height / 2f);
-      topLeft = new Vector3(minX , 0f , maxY);
-      topRight = new Vector3(maxX , 0f , maxY);
-      bottomRight = new Vector3(maxX , 0f , minY);
-      bottomLeft = new Vector3(minX , 0f , minY);
+      center = new Vector3(minX + width / 2f, 0f, minY + height / 2f);
+      topLeft = new Vector3(minX, 0f, maxY);
+      topRight = new Vector3(maxX, 0f, maxY);
+      bottomRight = new Vector3(maxX, 0f, minY);
+      bottomLeft = new Vector3(minX, 0f, minY);
     }
 
 
-    public Area(float _width , float _height, float _marginSize) {
+    public Area(float _width, float _height, float _marginSize) {
       height = _height - _marginSize * 2f;
       width = _width - _marginSize * 2f;
       center = Vector3.zero;
@@ -98,10 +121,10 @@ public class MapManager : MonoBehaviour {
       minY = center.y - height / 2f;
       maxX = center.x + width / 2f;
       maxY = center.y + height / 2f;
-      topLeft = new Vector3(minX , 0f , maxY);
-      topRight = new Vector3(maxX , 0f , maxY);
-      bottomRight = new Vector3(maxX , 0f , minY);
-      bottomLeft = new Vector3(minX , 0f , minY);
+      topLeft = new Vector3(minX, 0f, maxY);
+      topRight = new Vector3(maxX, 0f, maxY);
+      bottomRight = new Vector3(maxX, 0f, minY);
+      bottomLeft = new Vector3(minX, 0f, minY);
     }
   }
 

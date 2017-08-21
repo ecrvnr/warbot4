@@ -24,6 +24,13 @@ public class MainMenuManager : MonoBehaviour {
     } else if (instance != this) {
       Destroy(gameObject);
     }
+    Scene gameScene = SceneManager.GetSceneByName("Game");
+    SceneManager.LoadSceneAsync("Game" , LoadSceneMode.Additive);
+  }
+
+
+  void Start() {
+    SceneManager.SetActiveScene(SceneManager.GetSceneByName("Game"));
   }
 
 
@@ -39,7 +46,7 @@ public class MainMenuManager : MonoBehaviour {
 
   public void StartGame() {
     if (m_TeamBlueDropdown.value != 0 && m_TeamRedDropdown.value != 0 && m_MapSizeDropdown.value != 0 && m_MapSelectToggleGroup.AnyTogglesOn()) {
-      SceneManager.LoadScene("Game");
+      
     }
   }
 

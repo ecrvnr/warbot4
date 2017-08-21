@@ -22,8 +22,8 @@ public class WarTankFire : MonoBehaviour {
 
   void Awake() {
     m_Camera = GameObject.Find("CameraRig/MainCamera").GetComponent<Camera>();
-    m_ProjectileEmitter = transform.Find("TankRenderers/TankTurret/ProjectileEmitter");
-    m_Turret = transform.Find("TankRenderers/TankTurret");
+    m_ProjectileEmitter = transform.Find("Renderers/Turret/ProjectileEmitter");
+    m_Turret = transform.Find("Renderers/Turret");
     m_AttackTarget = new GameObject("AttackTarget").transform;
     m_TargetSet = false;
     m_TimeToReload = 0f;

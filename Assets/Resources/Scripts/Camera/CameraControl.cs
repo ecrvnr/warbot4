@@ -6,7 +6,7 @@ public class CameraControl : MonoBehaviour {
   public float m_DampTime = 0.2f;
   public float m_ScreenEdgeBuffer = 4f;
   public float m_MinSize = 6.5f;
-  [HideInInspector] public List<Transform> m_Targets;
+  public List<Transform> m_Targets;
   public static CameraControl instance = null;
 
   private Camera m_Camera;
@@ -17,7 +17,7 @@ public class CameraControl : MonoBehaviour {
 
   private void Awake() {
     m_Camera = GetComponentInChildren<Camera>();
-    m_Targets = new List<Transform>();
+    m_Targets = m_Targets == null? new List<Transform>() : m_Targets = m_Targets;
 
     if(instance == null) {
       instance = this;

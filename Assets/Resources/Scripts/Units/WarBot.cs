@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WarTank : MonoBehaviour {
+public class WarBot : MonoBehaviour {
 
   private CameraControl m_Camera;
 
