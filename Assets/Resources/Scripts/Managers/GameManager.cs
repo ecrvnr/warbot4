@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-  private Transform m_Spawnpoint1;
-  private Transform m_Spawnpoint2;
-
+  public static GameManager instance;
+  public bool m_GameRunning;
 
   void Awake() {
+    if(instance == null) {
+      instance = this;
+    } else if (instance != this) {
+      Destroy(gameObject);
+    }
   }
 
   // Use this for initialization
@@ -19,5 +23,9 @@ public class GameManager : MonoBehaviour {
   // Update is called once per frame
   void Update() {
 
+  }
+
+  public void StartGame() {
+    m_GameRunning = true;
   }
 }
