@@ -23,7 +23,6 @@ public class MapManager : MonoBehaviour {
     }
     m_MapType = MapType.MAP_DESERT;
     m_MapSize = MapSize.MAP_MEDIUM;
-    GenerateMap();
   }
 
 
@@ -56,13 +55,13 @@ public class MapManager : MonoBehaviour {
         m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Desert/DesertMedium") as GameObject);
         break;
       case MapType.MAP_JUNGLE:
-        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Desert/DesertMedium") as GameObject);
+        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Jungle/JungleMedium") as GameObject);
         break;
       case MapType.MAP_MEDIEVAL:
-        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Desert/DesertMedium") as GameObject);
+        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Medieval/MedievalMedium") as GameObject);
         break;
       case MapType.MAP_SNOW:
-        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Desert/DesertMedium") as GameObject);
+        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Snow/SnowMedium") as GameObject);
         break;
     }
 

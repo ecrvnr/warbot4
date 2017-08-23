@@ -21,8 +21,7 @@ public class MainMenuManager : MonoBehaviour {
 
 
   void Start() {
-    SceneManager.SetActiveScene(SceneManager.GetSceneByName("Game"));
-    GameManager.instance.m_GameRunning = false;
+    
   }
 
 
