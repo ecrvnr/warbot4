@@ -17,7 +17,6 @@ public class CameraControl : MonoBehaviour {
 
   private void Awake() {
     m_Camera = GetComponentInChildren<Camera>();
-    m_Targets = m_Targets == null? new List<Transform>() : m_Targets = m_Targets;
 
     if(instance == null) {
       instance = this;

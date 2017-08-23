@@ -23,6 +23,7 @@ public class MapManager : MonoBehaviour {
     }
     m_MapType = MapType.MAP_DESERT;
     m_MapSize = MapSize.MAP_MEDIUM;
+    MapManager.instance.GenerateMap();
   }
 
 
@@ -50,24 +51,40 @@ public class MapManager : MonoBehaviour {
 
 
   public void GenerateMap() {
+    string mapToLoad = "Prefabs/Maps/";
     switch (m_MapType) {
       case MapType.MAP_DESERT:
-        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Desert/DesertMedium") as GameObject);
+        mapToLoad += "Desert/Desert";
         break;
       case MapType.MAP_JUNGLE:
-        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Jungle/JungleMedium") as GameObject);
+        mapToLoad += "Jungle/Jungle";
         break;
       case MapType.MAP_MEDIEVAL:
-        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Medieval/MedievalMedium") as GameObject);
+        mapToLoad += "Medieval/Medieval";
         break;
       case MapType.MAP_SNOW:
-        m_Map = Instantiate(Resources.Load<GameObject>("Prefabs/Maps/Snow/SnowMedium") as GameObject);
+        mapToLoad += "Snow/Snow";
         break;
     }
 
-    m_Map.name = "Map";
-    GameObject ground = GameObject.Find("Ground") as GameObject;
+    switch (m_MapSize) {
+      case MapSize.MAP_SMALL:
+        mapToLoad += "Small";
+        break;
+      case MapSize.MAP_MEDIUM:
+        mapToLoad += "Medium";
+        break;
+      case MapSize.MAP_LARGE:
+        mapToLoad += "Large";
+        break;
+    }
+
+    m_Map = Instantiate(Resources.Load<GameObject>(mapToLoad) as GameObject);
+    Debug.Log("Loaded " + mapToLoad);
+    //m_Map.name = "Map";
+    GameObject ground = m_Map.transform.Find("Ground").gameObject;
     m_GameArea = new Area(ground.transform.localScale.x, ground.transform.localScale.z, m_MarginSize);
+    Debug.Log(m_GameArea.width + "," + m_GameArea.height);
     gameObject.GetComponent<NavMeshSurface>().BuildNavMesh();
     m_CameraClamp1.position = new Vector3(m_GameArea.minX, 0f, m_GameArea.minY);
     m_CameraClamp2.position = new Vector3(m_GameArea.maxX, 0f, m_GameArea.maxY);

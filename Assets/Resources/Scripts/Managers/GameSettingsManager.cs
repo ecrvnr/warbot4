@@ -19,14 +19,14 @@ public class GameSettingsManager : MonoBehaviour {
 
 
   // Use this for initialization
-  void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+  void Start() {
+
+  }
+
+  // Update is called once per frame
+  void Update() {
+
+  }
 
 
   public void StartGame() {
@@ -37,7 +37,7 @@ public class GameSettingsManager : MonoBehaviour {
   }
 
 
-  public void LoadMap(string _toggleName) {
+  public void SetMapType(string _toggleName) {
     Toggle toggle = GameObject.Find(_toggleName).GetComponent<Toggle>();
     if (toggle.isOn) {
       switch (_toggleName) {
@@ -58,4 +58,13 @@ public class GameSettingsManager : MonoBehaviour {
     }
   }
 
+
+  public void SetMapSize(string _dropdownName) {
+    Dropdown dropdown = GameObject.Find(_dropdownName).GetComponent<Dropdown>();
+    if (m_MapSizeDropdown.value != 0) {
+      Debug.Log("Selected " + m_MapSizeDropdown.value);
+      MapManager.instance.m_MapSize = (MapManager.MapSize)m_MapSizeDropdown.value - 1;
+      MapManager.instance.ChangeMap();
+    }
+  }
 }
