@@ -23,7 +23,6 @@ public class MapManager : MonoBehaviour {
     }
     m_MapType = MapType.MAP_DESERT;
     m_MapSize = MapSize.MAP_MEDIUM;
-    MapManager.instance.GenerateMap();
   }
 
 

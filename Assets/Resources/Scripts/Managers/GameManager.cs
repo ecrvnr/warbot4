@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
   // Use this for initialization
   void Start() {
     SceneManager.SetActiveScene(SceneManager.GetSceneByName("Game"));
+    MapManager.instance.GenerateMap();
   }
 
   // Update is called once per frame
