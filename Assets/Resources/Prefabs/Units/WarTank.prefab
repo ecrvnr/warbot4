@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 54808884212177866}
   - component: {fileID: 65999795958280256}
   - component: {fileID: 195276669011989816}
+  - component: {fileID: 114786973797266540}
   m_Layer: 0
   m_Name: WarTank
   m_TagString: Untagged
@@ -807,6 +808,23 @@ MonoBehaviour:
   m_ExplosionForce: 1000
   m_MaxLifeTime: 2
   m_ExplosionRadius: 5
+--- !u!114 &114786973797266540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121338048299156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab41b1db34170248a2f8955da928ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 1
+  m_renderers:
+  - {fileID: 23262201882553480}
+  - {fileID: 23197639977154008}
+  - {fileID: 23052925431107556}
+  - {fileID: 23352873607413558}
 --- !u!136 &136091777649532620
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static WarBot;
 
 public class GameSettingsManager : MonoBehaviour {
 
@@ -66,5 +67,10 @@ public class GameSettingsManager : MonoBehaviour {
       MapManager.instance.m_MapSize = (MapManager.MapSize)m_MapSizeDropdown.value - 1;
       MapManager.instance.ChangeMap();
     }
+  }
+
+
+  public void AdjustNumberOfUnits(string unitType) {
+    
   }
 }

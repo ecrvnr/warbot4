@@ -33,7 +33,7 @@ public class MapManager : MonoBehaviour {
 
 
   public void Update() {
-   
+
   }
 
 
@@ -143,6 +143,14 @@ public class MapManager : MonoBehaviour {
       topRight = new Vector3(maxX, 0f, maxY);
       bottomRight = new Vector3(maxX, 0f, minY);
       bottomLeft = new Vector3(minX, 0f, minY);
+    }
+
+
+    public Vector3 SelectRandomPoint() {
+      Random.InitState(GetHashCode() * System.DateTime.Now.GetHashCode());
+      float x = Random.Range(minX, maxX);
+      float z = Random.Range(minY, maxY);
+      return new Vector3(x, 0f, z);
     }
   }
 
