@@ -99,10 +99,12 @@ public class GameSettingsManager : MonoBehaviour {
         break;
     }
 
-    if (slider.value > teamRed.Count) {
+    while (slider.value > teamRed.Count) {
       GameManager.instance.m_TeamBlue.SpawnAtRandomPosition(unitType);
       GameManager.instance.m_TeamRed.SpawnAtRandomPosition(unitType);
-    } else if (slider.value < teamRed.Count) {
+    }
+
+    while (slider.value < teamRed.Count) {
       GameManager.instance.m_TeamBlue.DeregisterUnit(teamBlue[teamBlue.Count - 1]);
       GameManager.instance.m_TeamRed.DeregisterUnit(teamRed[teamRed.Count - 1]);
     }

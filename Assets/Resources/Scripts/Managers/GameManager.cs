@@ -39,11 +39,20 @@ public class GameManager : MonoBehaviour {
   }
 
 
+  public void ResetTeams() {
+    if (m_TeamRed != null) {
+      m_TeamRed.InitArea();
+      m_TeamRed.ScramblePositions();
+      m_TeamBlue.InitArea();
+      m_TeamBlue.ScramblePositions();
+    }
+  }
+
   public class Team {
 
     public Color m_color;
     public Area m_area;
-    public List<GameObject> m_warBots = new List<GameObject> ();
+    public List<GameObject> m_warBots = new List<GameObject>();
     public List<GameObject> m_WarBases = new List<GameObject>();
     public List<GameObject> m_WarTanks = new List<GameObject>();
     public List<GameObject> m_warEngineers = new List<GameObject>();
@@ -52,10 +61,14 @@ public class GameManager : MonoBehaviour {
 
 
     public Team(Color _color) {
-      Area totalArea = MapManager.instance.m_GameArea;
       m_color = _color;
+      InitArea();
+    }
+
+    public void InitArea() {
+      Area totalArea = MapManager.instance.m_GameArea;
       if (m_color == Color.red) {
-        m_area = new Area(totalArea.minX , totalArea.minY , totalArea.minX + totalArea.width / 8f , totalArea.maxY);
+        m_area = new Area(totalArea.minX, totalArea.minY, totalArea.minX + totalArea.width / 8f, totalArea.maxY);
       } else {
         m_area = new Area(totalArea.maxX - totalArea.width / 8f, totalArea.minY, totalArea.maxX, totalArea.maxY);
       }
@@ -65,20 +78,23 @@ public class GameManager : MonoBehaviour {
     public GameObject SpawnAtRandomPosition(string unitType) {
       GameObject warbot = Spawn(unitType);
       warbot.transform.position = m_area.SelectRandomPoint();
+      warbot.transform.LookAt(MapManager.instance.m_GameArea.center);
+      warbot.transform.rotation *= Quaternion.Euler(0f, Random.Range(-20f, 20f), 0f);
       return warbot;
     }
 
 
-    public GameObject SpawnAtRandomPosition(string unitType , Vector3 position) {
+    public GameObject SpawnAtPosition(string unitType, Vector3 position) {
       GameObject warbot = Spawn(unitType);
       warbot.transform.position = position;
+      warbot.transform.LookAt(MapManager.instance.m_GameArea.center);
+      warbot.transform.rotation *= Quaternion.Euler(0f, Random.Range(-20f, 20f), 0f);
       return warbot;
     }
 
 
     public GameObject Spawn(string unitType) {
       GameObject warbot = Instantiate(Resources.Load("Prefabs/Units/" + unitType) as GameObject);
-      warbot.transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 359.9f), 0f);
       warbot.GetComponent<WarBot>().m_team = this;
       warbot.GetComponent<WarBot>().m_type = StringToWarBotType(unitType);
       warbot.transform.parent = null;
@@ -133,6 +149,12 @@ public class GameManager : MonoBehaviour {
 
       if (unit != null) {
         unit.GetComponent<WarBot>().Die();
+      }
+    }
+
+    public void ScramblePositions() {
+      foreach (GameObject unit in m_warBots) {
+        unit.transform.position = m_area.SelectRandomPoint();
       }
     }
   }

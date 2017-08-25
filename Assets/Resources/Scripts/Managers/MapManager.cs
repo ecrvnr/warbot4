@@ -85,6 +85,10 @@ public class MapManager : MonoBehaviour {
     m_Map.GetComponent<NavMeshSurface>().BuildNavMesh();
     m_CameraClamp1.position = new Vector3(m_GameArea.minX, 0f, m_GameArea.minY);
     m_CameraClamp2.position = new Vector3(m_GameArea.maxX, 0f, m_GameArea.maxY);
+
+    if (GameManager.instance != null) {
+      GameManager.instance.ResetTeams();
+    }
   }
 
 
@@ -147,7 +151,7 @@ public class MapManager : MonoBehaviour {
 
 
     public Vector3 SelectRandomPoint() {
-      Random.InitState(GetHashCode() * System.DateTime.Now.GetHashCode());
+      Random.InitState(System.Guid.NewGuid().GetHashCode());
       float x = Random.Range(minX, maxX);
       float z = Random.Range(minY, maxY);
       return new Vector3(x, 0f, z);
