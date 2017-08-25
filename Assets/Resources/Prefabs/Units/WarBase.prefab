@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4380415055817716}
+  - component: {fileID: 65763034165440674}
   m_Layer: 0
   m_Name: WarBase
   m_TagString: Untagged
@@ -193,7 +194,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1011985278997296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.53, y: 0, z: -5.37}
+  m_LocalPosition: {x: -14.8, y: 0, z: 6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4147013560978146}
@@ -559,3 +560,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1172163563249358}
   m_Mesh: {fileID: 4300004, guid: ba1cecf16c43cb44b938993d525975bf, type: 3}
+--- !u!65 &65763034165440674
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011985278997296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.07, y: 4.81, z: 5.22}
+  m_Center: {x: 0, y: 2.67, z: 0.45}
