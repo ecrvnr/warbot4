@@ -39,9 +39,6 @@ GameObject:
   - component: {fileID: 54808884212177866}
   - component: {fileID: 65999795958280256}
   - component: {fileID: 195276669011989816}
-  - component: {fileID: 114697252291004798}
-  - component: {fileID: 114620625971853020}
-  - component: {fileID: 114371206106844640}
   m_Layer: 0
   m_Name: WarTank
   m_TagString: Untagged
@@ -790,17 +787,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114371206106844640
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121338048299156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab41b1db34170248a2f8955da928ba2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114448467546433160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -821,33 +807,6 @@ MonoBehaviour:
   m_ExplosionForce: 1000
   m_MaxLifeTime: 2
   m_ExplosionRadius: 5
---- !u!114 &114620625971853020
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121338048299156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c67110d6de9ef654a8dfa3b46e8cda5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TurretAimRotationSpeed: 15
-  m_TurretResetRotationSpeed: 2
-  m_Precision: 5
-  m_ReloadTime: 1
-  m_Shell: {fileID: 54501820313686690, guid: 810081fd103d34c438b4734d4d130a9d, type: 2}
---- !u!114 &114697252291004798
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121338048299156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4d9ced64336184cbcfdf3974c5c9e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &136091777649532620
 CapsuleCollider:
   m_ObjectHideFlags: 1
