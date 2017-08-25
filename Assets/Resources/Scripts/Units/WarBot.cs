@@ -42,6 +42,12 @@ public class WarBot : MonoBehaviour {
     }
   }
 
+  public void Die() {
+    m_Camera.m_Targets.Remove(transform);
+    Destroy(gameObject);
+  }
+
+
 
   public static WarBotType StringToWarBotType(string _type) {
     switch (_type) {

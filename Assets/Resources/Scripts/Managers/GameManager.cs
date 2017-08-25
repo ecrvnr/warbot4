@@ -130,6 +130,10 @@ public class GameManager : MonoBehaviour {
           break;
       }
       m_warBots.Remove(unit);
+
+      if (unit != null) {
+        unit.GetComponent<WarBot>().Die();
+      }
     }
   }
 }

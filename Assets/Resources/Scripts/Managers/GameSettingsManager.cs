@@ -71,6 +71,40 @@ public class GameSettingsManager : MonoBehaviour {
 
 
   public void AdjustNumberOfUnits(string unitType) {
-    
+    Slider slider = GameObject.Find(unitType + "Slider/Slider").GetComponent<Slider>();
+    WarBotType type = StringToWarBotType(unitType);
+    List<GameObject> teamRed = new List<GameObject>();
+    List<GameObject> teamBlue = new List<GameObject>();
+
+    switch (type) {
+      case WarBotType.WarBase:
+        teamRed = GameManager.instance.m_TeamRed.m_WarBases;
+        teamBlue = GameManager.instance.m_TeamBlue.m_WarBases;
+        break;
+      case WarBotType.WarTank:
+        teamRed = GameManager.instance.m_TeamRed.m_WarTanks;
+        teamBlue = GameManager.instance.m_TeamBlue.m_WarTanks;
+        break;
+      case WarBotType.WarTurret:
+        teamRed = GameManager.instance.m_TeamRed.m_warTurrets;
+        teamBlue = GameManager.instance.m_TeamBlue.m_warTurrets;
+        break;
+      case WarBotType.WarEngineer:
+        teamRed = GameManager.instance.m_TeamRed.m_warEngineers;
+        teamBlue = GameManager.instance.m_TeamBlue.m_warEngineers;
+        break;
+      case WarBotType.WarExplorer:
+        teamRed = GameManager.instance.m_TeamRed.m_warExplorers;
+        teamBlue = GameManager.instance.m_TeamBlue.m_warExplorers;
+        break;
+    }
+
+    if (slider.value > teamRed.Count) {
+      GameManager.instance.m_TeamBlue.SpawnAtRandomPosition(unitType);
+      GameManager.instance.m_TeamRed.SpawnAtRandomPosition(unitType);
+    } else if (slider.value < teamRed.Count) {
+      GameManager.instance.m_TeamBlue.DeregisterUnit(teamBlue[teamBlue.Count - 1]);
+      GameManager.instance.m_TeamRed.DeregisterUnit(teamRed[teamRed.Count - 1]);
+    }
   }
 }
