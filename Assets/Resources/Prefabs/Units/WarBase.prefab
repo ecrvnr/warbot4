@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4380415055817716}
   - component: {fileID: 65763034165440674}
   - component: {fileID: 114261932738142126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WarBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4147013560978146}
   - component: {fileID: 33101884693250480}
   - component: {fileID: 23368405771396146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4531681368808056}
   - component: {fileID: 33941112651355090}
   - component: {fileID: 23341660284515268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Threshold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4804511957311524}
   - component: {fileID: 33827897622209140}
   - component: {fileID: 23509019972319656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Antenna1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4780578649395530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Renderers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4409635778941488}
   - component: {fileID: 33789031676468672}
   - component: {fileID: 23635220757874838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Speaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4525431350890580}
   - component: {fileID: 33490527463240926}
   - component: {fileID: 23926288964870132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Antenna2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4369568389114388}
   - component: {fileID: 33074486073424890}
   - component: {fileID: 23781288391880500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Antenna4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4832973942150498}
   - component: {fileID: 33894050235378338}
   - component: {fileID: 23690339537286598}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Antenna3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4844836179341164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Antennae
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,5 +613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab41b1db34170248a2f8955da928ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: 0
   m_renderers:
   - {fileID: 23368405771396146}

@@ -12,8 +12,7 @@ public class MapManager : MonoBehaviour {
   public Area m_GameArea;
   public Transform m_CameraClamp1;
   public Transform m_CameraClamp2;
-
-  private GameObject m_Map;
+  public GameObject m_Map;
 
   void Awake() {
     if (instance == null) {

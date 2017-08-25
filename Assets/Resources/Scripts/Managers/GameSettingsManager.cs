@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static WarBot;
@@ -107,6 +108,10 @@ public class GameSettingsManager : MonoBehaviour {
     while (slider.value < teamRed.Count) {
       GameManager.instance.m_TeamBlue.DeregisterUnit(teamBlue[teamBlue.Count - 1]);
       GameManager.instance.m_TeamRed.DeregisterUnit(teamRed[teamRed.Count - 1]);
+    }
+
+    if (StringToWarBotType(unitType) == WarBotType.WarBase) {
+      MapManager.instance.m_Map.GetComponent<NavMeshSurface>().BuildNavMesh();
     }
   }
 }
