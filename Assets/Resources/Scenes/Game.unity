@@ -1527,6 +1527,7 @@ MonoBehaviour:
   m_MapSize: 0
   m_CameraClamp1: {fileID: 494277271}
   m_CameraClamp2: {fileID: 496145836}
+  m_Map: {fileID: 0}
 --- !u!1 &1484633786
 GameObject:
   m_ObjectHideFlags: 0
