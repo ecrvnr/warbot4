@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4422746380832486}
   - component: {fileID: 33262589776916188}
   - component: {fileID: 23884847722932764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WarBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
