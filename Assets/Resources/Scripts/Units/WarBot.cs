@@ -48,7 +48,6 @@ public class WarBot : MonoBehaviour {
   }
 
 
-
   public static WarBotType StringToWarBotType(string _type) {
     switch (_type) {
       case "WarBase":
