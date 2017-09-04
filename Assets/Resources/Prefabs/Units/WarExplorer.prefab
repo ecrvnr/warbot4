@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 54669098212715798}
   - component: {fileID: 195868430962257632}
   - component: {fileID: 114975783818178510}
+  - component: {fileID: 114502228826230184}
   m_Layer: 0
   m_Name: WarExplorer
   m_TagString: Untagged
@@ -582,6 +583,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.99, z: 4}
   m_Center: {x: 0.18, y: 0.81, z: 0}
+--- !u!114 &114502228826230184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440656854694678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c74620520cb1534c8d5dc0e55f3c706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxResources: 1000
+  m_CurrentResources: 0
 --- !u!114 &114733632619256252
 MonoBehaviour:
   m_ObjectHideFlags: 1

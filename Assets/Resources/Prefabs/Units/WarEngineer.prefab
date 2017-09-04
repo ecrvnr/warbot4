@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65981168381164178}
   - component: {fileID: 195848355042793372}
   - component: {fileID: 114647769267269408}
+  - component: {fileID: 114889808730166726}
   m_Layer: 0
   m_Name: WarEngineer
   m_TagString: Untagged
@@ -254,6 +255,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxHealth: 150
   m_CurrentHealth: 0
+--- !u!114 &114889808730166726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1073049108298154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c74620520cb1534c8d5dc0e55f3c706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxResources: 350
+  m_CurrentResources: 0
 --- !u!114 &114990479330909910
 MonoBehaviour:
   m_ObjectHideFlags: 1

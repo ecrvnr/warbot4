@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114793814667568904}
   - component: {fileID: 136274016048398006}
   - component: {fileID: 114114334410574216}
+  - component: {fileID: 114702813943694208}
   m_Layer: 0
   m_Name: WarTurret
   m_TagString: Untagged
@@ -533,6 +534,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxHealth: 80
   m_CurrentHealth: 0
+--- !u!114 &114702813943694208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1279614689367998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c74620520cb1534c8d5dc0e55f3c706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxResources: 100
+  m_CurrentResources: 0
 --- !u!114 &114793814667568904
 MonoBehaviour:
   m_ObjectHideFlags: 1
