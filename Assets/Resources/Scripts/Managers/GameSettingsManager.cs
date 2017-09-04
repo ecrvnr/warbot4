@@ -109,9 +109,5 @@ public class GameSettingsManager : MonoBehaviour {
       GameManager.instance.m_TeamBlue.DeregisterUnit(teamBlue[teamBlue.Count - 1]);
       GameManager.instance.m_TeamRed.DeregisterUnit(teamRed[teamRed.Count - 1]);
     }
-
-    if (StringToWarBotType(unitType) == WarBotType.WarBase) {
-      MapManager.instance.m_Map.GetComponent<NavMeshSurface>().BuildNavMesh();
-    }
   }
 }

@@ -36,7 +36,9 @@ public class GameManager : MonoBehaviour {
   }
 
   public void StartGame() {
+    MapManager.instance.m_Map.GetComponent<NavMeshSurface>().BuildNavMesh();
     m_GameRunning = true;
+
   }
 
 

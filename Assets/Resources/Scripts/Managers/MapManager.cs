@@ -81,7 +81,6 @@ public class MapManager : MonoBehaviour {
     m_Map.name = "Map";
     GameObject ground = m_Map.transform.Find("Ground").gameObject;
     m_GameArea = new Area(ground.transform.localScale.x, ground.transform.localScale.z, m_MarginSize);
-    m_Map.GetComponent<NavMeshSurface>().BuildNavMesh();
     m_CameraClamp1.position = new Vector3(m_GameArea.minX, 0f, m_GameArea.minY);
     m_CameraClamp2.position = new Vector3(m_GameArea.maxX, 0f, m_GameArea.maxY);
 
