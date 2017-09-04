@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 65999795958280256}
   - component: {fileID: 195276669011989816}
   - component: {fileID: 114786973797266540}
+  - component: {fileID: 114307606654374194}
   m_Layer: 0
   m_Name: WarTank
   m_TagString: Untagged
@@ -788,6 +789,19 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114307606654374194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121338048299156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afa31db4ce4c1143af796c705df743e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 200
+  m_CurrentHealth: 0
 --- !u!114 &114448467546433160
 MonoBehaviour:
   m_ObjectHideFlags: 1

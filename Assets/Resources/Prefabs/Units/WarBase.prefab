@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4380415055817716}
   - component: {fileID: 65763034165440674}
   - component: {fileID: 114261932738142126}
+  - component: {fileID: 114307859195892658}
   m_Layer: 9
   m_Name: WarBase
   m_TagString: Untagged
@@ -170,3 +171,16 @@ MonoBehaviour:
   m_type: 0
   m_renderers:
   - {fileID: 23884847722932764}
+--- !u!114 &114307859195892658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011985278997296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afa31db4ce4c1143af796c705df743e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 350
+  m_CurrentHealth: 0

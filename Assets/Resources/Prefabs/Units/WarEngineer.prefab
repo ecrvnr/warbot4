@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 54226959443828084}
   - component: {fileID: 65981168381164178}
   - component: {fileID: 195848355042793372}
+  - component: {fileID: 114647769267269408}
   m_Layer: 0
   m_Name: WarEngineer
   m_TagString: Untagged
@@ -240,6 +241,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.75, y: 2.12, z: 4.32}
   m_Center: {x: 0, y: 0.92, z: 0.24}
+--- !u!114 &114647769267269408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1073049108298154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afa31db4ce4c1143af796c705df743e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 150
+  m_CurrentHealth: 0
 --- !u!114 &114990479330909910
 MonoBehaviour:
   m_ObjectHideFlags: 1

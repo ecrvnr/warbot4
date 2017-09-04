@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthController : MonoBehaviour {
 
   public float m_MaxHealth;
-  public float m_CurrentHealth;
+  [HideInInspector] public float m_CurrentHealth;
 
   private WarBot m_WarBot;
 

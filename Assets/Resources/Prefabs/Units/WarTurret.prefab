@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4093844560301528}
   - component: {fileID: 114793814667568904}
   - component: {fileID: 136274016048398006}
+  - component: {fileID: 114114334410574216}
   m_Layer: 0
   m_Name: WarTurret
   m_TagString: Untagged
@@ -519,6 +520,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1203997195128374}
   m_Mesh: {fileID: 4300000, guid: 884578149a1d1df45946c369e5aa1029, type: 3}
+--- !u!114 &114114334410574216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1279614689367998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afa31db4ce4c1143af796c705df743e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 80
+  m_CurrentHealth: 0
 --- !u!114 &114793814667568904
 MonoBehaviour:
   m_ObjectHideFlags: 1
