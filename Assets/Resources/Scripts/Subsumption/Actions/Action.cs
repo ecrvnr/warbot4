@@ -10,18 +10,21 @@ public abstract class Action : MonoBehaviour, IAction {
     Destroy(this);
   }
 
-  public abstract void Run();
+  public virtual void End() {
+    Destroy(this);
+  }
 
   protected virtual void Awake() {
     m_WarBot = gameObject.GetComponent<WarBot>();
   }
 
-  protected virtual void Start() {
+  protected virtual void Start() {}
 
-  }
+  protected virtual void Update() {}
+
 }
 
 public interface IAction {
-  void Run();
   void Interrupt();
+  void End();
 }
